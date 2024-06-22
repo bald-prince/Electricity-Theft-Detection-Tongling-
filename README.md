@@ -40,5 +40,16 @@
     BC20+EMQX+RN8302(裸机)/FreeRtos+BC20+EMQX+RN8302(带FreeRTos操作系统)
     采用RN8302作为采集芯片，采集三项电流、电压、频率、有功功率、无功功率、电量等参数，用作窃电行为判别，同时作为实验室内部采集数据使用
 ## 二.显示端
-    IMX6ULL-Show：嵌入式显示端用于显示采集端上传的数据，通过连接到EMQX服务器或者阿里云服务器，订阅话题的形式获取数据并解析JSON数据。
-    采用基于IMX6ULL的硬件平台，采用Qt框架采用c++进行开发。
+    electricty-theft：嵌入式显示端用于显示采集端上传的数据，通过连接到EMQX服务器或者阿里云服务器， 采用基于IMX6ULL的硬件平台，采用Qt框架采用c++进行开发。
+    功能：
+        1.订阅话题的形式获取数据并解析JSON数据，并以文本的形式和曲线的形式进行显示。
+        2.连接数据库，并根据设备客户端id查询数据，并进行显示
+        3.连接wifi，实现无线连接。
+    部分图片展示：
+        ![89cd1c4c845b42a28259831399633b1](https://github.com/bald-prince/Electricity-Theft-Detection-Tongling-/assets/61234219/5ab6fd91-35c8-4c29-ba95-6d765e674786)
+        ![9dfcdc18267f7d54a82aeb0577632a8](https://github.com/bald-prince/Electricity-Theft-Detection-Tongling-/assets/61234219/2d33a42f-f4e1-435f-887e-0ee2f2aa8b91)
+
+        
+   
+    
+    
