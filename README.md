@@ -45,10 +45,11 @@
         1.订阅话题的形式获取数据并解析JSON数据，并以文本的形式和曲线的形式进行显示。
         2.连接数据库，并根据设备客户端id查询数据，并进行显示
         3.连接wifi，实现无线连接。
-    部分图片展示：
-        ![89cd1c4c845b42a28259831399633b1](https://github.com/bald-prince/Electricity-Theft-Detection-Tongling-/assets/61234219/5ab6fd91-35c8-4c29-ba95-6d765e674786)
-        ![9dfcdc18267f7d54a82aeb0577632a8](https://github.com/bald-prince/Electricity-Theft-Detection-Tongling-/assets/61234219/2d33a42f-f4e1-435f-887e-0ee2f2aa8b91)
-
+    使用方法：
+        Qt Creator打开编译之后将编译后的可执行文件拷贝至硬件平台运行即可。
+    注意事项：
+        软键盘的使用，将electricty-theft中的dict整个文件夹拷贝至可执行文件的同目录，将libSoft-keyboard.so拷贝至qt安装目录下plugins/platforminputcontexts即可
+        我的对应的是/usr/lib/plugins/platforminputcontexts。
         
    
     
