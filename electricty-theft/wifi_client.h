@@ -19,6 +19,7 @@
 #include <QLayoutItem>
 #include <QVBoxLayout>
 #include <QProcess>
+#include <QScrollBar>
 
 
 class Wifi_client : public QMainWindow
@@ -38,12 +39,17 @@ private:
     QProcess *ConnetWifi = nullptr;     //wifi连接进程
     QLabel* wifiState;                  //wifi状态显示
 
+    int currentPage = 0;
+    const int itemsPerPage = 10;
+    QStringList essidList;
+
 private slots:
     void OpenWifi(bool flag);           //wifi开关槽函数
     void ExitWifi();                    //退出wifi槽函数
     void RefreshWifi();                 //刷新列表槽函数
     void onItemClicked(QListWidgetItem *item);      //点击wifi槽函数
     void connectToWifi(const QString &essid, const QString &password);      //连接wifi槽函数
+    void loadNextPage();
 
 signals:
 };
