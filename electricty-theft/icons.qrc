@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/display.png</file>
+        <file>icons/not-display.png</file>
+        <file>icons/password.png</file>
+        <file>icons/user.png</file>
+        <file>icons/setting.png</file>
+        <file>icons/arrow.png</file>
+        <file>icons/background.png</file>
+        <file>icons/exit.png</file>
+        <file>icons/MQTT.png</file>
+        <file>icons/mysql.png</file>
+        <file>icons/desk.png</file>
+        <file>icons/mqtt-desk.png</file>
+        <file>icons/wifi.png</file>
+        <file>icons/switch_off.png</file>
+        <file>icons/switch_on.png</file>
+        <file>icons/wifi-exit.png</file>
+        <file>icons/refresh.png</file>
+        <file>icons/wifi-title.png</file>
+        <file>icons/wifi-connect.png</file>
+        <file>icons/wifi-disconnect.png</file>
+        <file>icons/mysql-database.png</file>
+        <file>icons/mysql-host.png</file>
+        <file>icons/mysql-password.png</file>
+        <file>icons/mysql-port.png</file>
+        <file>icons/mysql-user.png</file>
+        <file>icons/query.png</file>
+        <file>icons/pagedown.png</file>
+        <file>icons/pageup.png</file>
+        <file>icons/set.png</file>
+        <file>icons/level1.png</file>
+        <file>icons/level2.png</file>
+        <file>icons/level3.png</file>
+        <file>icons/level4.png</file>
+        <file>icons/OFF.png</file>
+        <file>icons/ON.png</file>
+    </qresource>
+</RCC>
