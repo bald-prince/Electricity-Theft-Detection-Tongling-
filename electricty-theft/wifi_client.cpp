@@ -124,15 +124,48 @@ void Wifi_client::RefreshWifi()
         {
             QRegularExpressionMatch match = i.next();
             QString essid = match.captured(1);
-            listWidget->addItem(essid);
+            essidList.append(essid);
         }
-        listWidget->repaint(); // 触发重绘
+        // 清空当前列表并重置页码
+        listWidget->clear();
+        currentPage = 0;
+
+        // 加载第一页
+        loadNextPage();
         connect(listWidget, &QListWidget::itemClicked, this, &Wifi_client::onItemClicked);
+        // 连接滑动条的 valueChanged 信号到 loadNextPage 槽函数
+        connect(listWidget->verticalScrollBar(), &QScrollBar::valueChanged, this, &Wifi_client::loadNextPage);
     }
     else
     {
         qDebug()<< "scan failed";
     }
+}
+
+void Wifi_client::loadNextPage()
+{
+    // 获取当前滑动条位置和最大值
+    QScrollBar *scrollBar = listWidget->verticalScrollBar();
+    if (scrollBar->value() != scrollBar->maximum())
+        return; // 只有在滑动到底部时才加载下一页
+
+    int start = currentPage * itemsPerPage;
+    int end = qMin(start + itemsPerPage, essidList.size());
+
+    for (int i = start; i < end; ++i)
+    {
+        QListWidgetItem *pItem = new QListWidgetItem;
+        pItem->setSizeHint(QSize(950, 45));  // 每次改变 Item 的高度
+        pItem->setText(essidList[i]);
+        // 创建自定义字体
+        QFont font = pItem->font();
+        font.setPointSize(14);  // 设置字体大小
+        pItem->setFont(font);  // 应用字体到列表项
+        listWidget->addItem(pItem);
+    }
+
+    currentPage++;
+    listWidget->repaint(); // 触发重绘
 }
 
 void Wifi_client::onItemClicked(QListWidgetItem *item)
