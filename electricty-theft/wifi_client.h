@@ -42,6 +42,7 @@ private:
     int currentPage = 0;
     const int itemsPerPage = 10;
     QStringList essidList;
+    QStringList signalStrengthList;
 
 private slots:
     void OpenWifi(bool flag);           //wifi开关槽函数
