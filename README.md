@@ -59,12 +59,15 @@ BC20+EMQX+RN8302(裸机)/FreeRtos+BC20+EMQX+RN8302(带FreeRTos操作系统)
 采用RN8302作为采集芯片，采集三相电流、电压、频率、有功功率、无功功率、电量等参数，用作窃电行为判别，同时作为实验室内部采集数据使用
 ## 二.显示端
 electricty-theft：嵌入式显示端用于显示采集端上传的数据，通过连接到EMQX服务器或者阿里云服务器， 采用基于IMX6ULL的硬件平台，采用Qt框架采用c++进行开发。
+
 功能：
     1.订阅话题的形式获取数据并解析JSON数据，并以文本的形式和曲线的形式进行显示。
     2.连接数据库，并根据设备客户端id查询数据，并进行显示
     3.连接wifi，实现无线连接。
+    
 使用方法：
     Qt Creator打开编译之后将编译后的可执行文件拷贝至硬件平台运行即可。
+    
 注意事项：
     1.软键盘的使用，将electricty-theft中的dict整个文件夹拷贝至可执行文件的同目录，将libSoft-keyboard.so拷贝至qt安装目录下plugins/platforminputcontexts即可，我的对应的是/usr/lib/plugins/platforminputcontexts。
     2.连接wifi的脚本alientek_usb_wifi_setup.sh根据自己的实际情况进行修改，我的与可执行目录在同一目录。
