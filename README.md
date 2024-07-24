@@ -78,11 +78,11 @@ electricty-theft：嵌入式显示端用于显示采集端上传的数据，通�
     
 注意事项：
 
-    1.软键盘的使用，将electricty-theft中的dict整个文件夹拷贝至可执行文件的同目录，将libSoft-keyboard.so拷贝至qt安装目录下plugins/platforminputcontexts即可，我的对应的是/usr/lib/plugins/platforminputcontexts。
+1.软键盘的使用，将electricty-theft中的dict整个文件夹拷贝至可执行文件的同目录，将libSoft-keyboard.so拷贝至qt安装目录下plugins/platforminputcontexts即可，我的对应的是/usr/lib/plugins/platforminputcontexts。
+
+2.连接wifi的脚本alientek_usb_wifi_setup.sh根据自己的实际情况进行修改，我的与可执行目录在同一目录。
     
-    2.连接wifi的脚本alientek_usb_wifi_setup.sh根据自己的实际情况进行修改，我的与可执行目录在同一目录。
-    
-    3.用户名注册与登录是连接到本地数据库login.db，开发板需要移植sqlite3，自行移植。移植完毕后，将electricty-theft下的login.db文件拷贝到程序可执行文件同目录即可。sqlite3命令详细自行搜索。
+3.用户名注册与登录是连接到本地数据库login.db，开发板需要移植sqlite3，自行移植。移植完毕后，将electricty-theft下的login.db文件拷贝到程序可执行文件同目录即可。sqlite3命令详细自行搜索。
         
         
    
