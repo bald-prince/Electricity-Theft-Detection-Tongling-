@@ -13,6 +13,7 @@
 #include "showdata.h"
 #include <QPalette>
 #include <QPixmap>
+#include <QInputDialog>
 
 
 class Login : public QWidget
@@ -26,9 +27,11 @@ private:
     QLineEdit *lineEditPassword;        //密码输入框
     QCheckBox *passwordBox;             //密码小眼睛
     QPushButton* btnLoginIn;            //登录按钮
+    QPushButton* btnRegister;            //登录按钮
     QPushButton* btnExit;               //退出按钮
     QAction *actionUser;                //用户名输入框图标
     QAction *actionPassword;            //密码输入框图标
+    QInputDialog* AdminInputDialog;          //密码输入框
     Showdata* showdata;                 //主界面
 
 
@@ -36,6 +39,7 @@ private slots:
     void checkbox_state_changed(int state);     //密码明文暗文切换槽函数
     void LogininClient();                       //登录槽函数
     void ExitClient();                          //退出槽函数
+    void RegisterClient();                          //退出槽函数
 
 
 signals:
