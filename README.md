@@ -77,6 +77,7 @@ electricty-theft：嵌入式显示端用于显示采集端上传的数据，通�
     Qt Creator打开编译之后将编译后的可执行文件拷贝至硬件平台运行即可。
     
 注意事项：
+
     1.软键盘的使用，将electricty-theft中的dict整个文件夹拷贝至可执行文件的同目录，将libSoft-keyboard.so拷贝至qt安装目录下plugins/platforminputcontexts即可，我的对应的是/usr/lib/plugins/platforminputcontexts。
     
     2.连接wifi的脚本alientek_usb_wifi_setup.sh根据自己的实际情况进行修改，我的与可执行目录在同一目录。
